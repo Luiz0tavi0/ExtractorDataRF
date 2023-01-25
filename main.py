@@ -59,7 +59,7 @@ def download_unitario(url: tuple[int, str]):
 
 
 def upload_all_files():
-    s3 = AmazonS3("AKIA4RMHO4IB65K2YZFB", "/lpwZ1pc+R10kIrWW4TIRvoUZyDgafc9jGye8bC4", 'us-east-1')
+    s3 = s3 = AmazonS3("", "", 'us-east-1')
     for root, dirs, files in os.walk(os.path.join(BASE_PATH, r'unziped')):
         for file in files:
             with open(os.path.join(BASE_PATH, r'unziped', file), 'rb') as data:
@@ -72,7 +72,7 @@ def upload_all_files():
 if __name__ == '__main__':
     # get_urls()
 
-    # s3 = AmazonS3("AKIA4RMHO4IB65K2YZFB", "/lpwZ1pc+R10kIrWW4TIRvoUZyDgafc9jGye8bC4", 'us-east-1')
+    # s3 = AmazonS3("", "", 'us-east-1')
     # with open(os.path.join(os.getcwd(), r'downloads/K3241.K03200Y1.D20312.EMPRECSV.zip'), 'rb') as data:
     #     s3.push_data_to_s3_bucket('zeta-internal-data', data, 'K3241.K03200Y1.D20312.EMPRECSV.zip',
     #                               file_size=os.path.getsize(
